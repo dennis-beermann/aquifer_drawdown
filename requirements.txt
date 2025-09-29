@@ -1,5 +1,0 @@
-numpy
-matplotlib
-scipy
-ipywidgets>=8
-voila
