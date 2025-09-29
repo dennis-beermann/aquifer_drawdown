@@ -36,7 +36,7 @@ jobs:
       # If you keep them elsewhere, add:  jupyter lite build --output-dir _output --contents path/to/dir
       - name: Build JupyterLite site
         run: |
-          jupyter lite build --output-dir _output
+          jupyter lite build --output-dir _output --contents content
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
