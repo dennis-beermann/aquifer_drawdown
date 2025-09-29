@@ -1,8 +1,7 @@
 {
   "jupyterlite": {
     "contents": ["content/"],
-    "federated_extensions": [
-      "@jupyter-widgets/jupyterlab-manager"
-    ]
+    "federated_extensions": ["@jupyter-widgets/jupyterlab-manager"],
+    "piplite_urls": ["https://cdn.jsdelivr.net/pyodide/v0.24.1/full/"]
   }
 }
