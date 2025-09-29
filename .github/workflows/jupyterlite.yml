@@ -15,7 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: jupyterlite/jupyterlite-actions@v1
+      - uses: jupyterlite/action-main@v1
+
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
