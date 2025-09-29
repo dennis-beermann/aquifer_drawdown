@@ -8,5 +8,5 @@ dependencies:
   - matplotlib
   - ipywidgets>=8
   - voila>=0.5
-  - jupyterlab
+  - jupyterlab         # optional but handy
   - jupyter-server-mathjax
