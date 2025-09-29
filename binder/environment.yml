@@ -1,0 +1,12 @@
+name: drawdown
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - matplotlib
+  - ipywidgets>=8
+  - voila>=0.5
+  - jupyterlab
+  - jupyter-server-mathjax

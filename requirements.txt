@@ -1,6 +1,0 @@
-numpy
-scipy
-matplotlib
-ipywidgets>=8
-jupyterlab
-voila
