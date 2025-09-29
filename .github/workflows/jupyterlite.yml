@@ -1,0 +1,36 @@
+name: jupyterlite
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jupyterlite/jupyterlite-actions@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          build_dir: _output
+          # Optional: pre-warm pyodide packages
+          # pyodide_urls: "https://cdn.jsdelivr.net/pyodide/v0.24.1/full/"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _output
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
